@@ -11,10 +11,9 @@ actual timeline
 10: Hello World with Flask achieved
 11: realized flask sucked and created website contents
 12: switched to bootstrap, established fully functional website
-13:
+13:Font, fixed footer, fixed cooper link, Paragraphs, git hosted and switched to online based links
+14: fixed pictures except about page, DID NOT FIX WHITE SPACE, fixed crediting
 
-tmr: fix backgrounds, ensure links, and throw in pics. also test at various sizes and look into git hosting
+tmr: get pic of us fitted up
 
-Needs: Paragraph, Pictures, Improve spacing on about us, Change page Background to red
-
-Done: Font, fixed footer, fixed cooper link, 
+Done: 

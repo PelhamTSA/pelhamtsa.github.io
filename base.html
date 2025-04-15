@@ -8,26 +8,80 @@
           line-height: 1.625;
           color: #000000;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: #ffffff;
+          background-color: transparent;
         }
         .navbar{
-          background: crimson; font-family: Arial; padding-right: 15px;padding-left: 15px;
-        }
-        .navdiv{
-          display: flex; align-items: center; justify-content: space-between;
+          background: transparent;
+          top: 50px;
+          font-family: Arial; 
+          padding-right: 15px;
+          padding-left: 15px;
         }
         .logo a{
-          font-size: 35px; font-weight: 600; color: white;
+          font-size: 35px; 
+          font-weight: 600; 
+          color: white;
         }
-        li{
-          list-style: none; display: inline-block;
+        .nav {
+          display: flex;
+          gap: 20px; /* Add spacing between nav items */
         }
         li a{
-          color: rgb(148, 15, 15); font-size: 18px; font-weight: bold; margin-right: 25px;
+          position: static;
+          color: rgb(148, 15, 15); 
+          font-size: 18px; 
+          font-weight: bold; 
         }
         footer *{
-            background-color: #7a0000;
-            color: white;
+          background-color: #7a0000;
+          color: white;
+        }
+        .navbar img {
+          position: static;
+        }
+        .exterioror{
+          position: relative;
+          left: -40px; /* Move the image to the left */
+          top: 50px;
+          width: 100%;
+        }
+        .absolute-text {
+          position: absolute; /* Position relative to the parent */
+          top: 50%; /* Adjust as needed */
+          left: 50%; /* Adjust as needed */
+          transform: translate(-50%, -50%); /* Adjust for the element's own dimensions */
+          font-size: 50px;
+          color: white;
+        }
+        .relative-parent {
+          position: relative; /* Establish positioning context */
+          width: 100%;
+          height: 100%;
+          display: flex; /* Enable Flexbox */
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          background: transparent;
+        }
+        .container {
+          width: 100%;
+          height: 300px;
+          background: transparent;
+        }
+        .textio{
+          position: relative;
+          left: -10px; /* Move the image to the left */
+          top: 0px;
+          font-size: 40px;
+          font-weight: bold;
+          color: blue;
+        }
+        #topsection {
+          background-image: url(Restaurant.jpg); /* URL of the background image */
+          background-size: cover; /* Ensures the image covers the entire background */
+          background-repeat: no-repeat; /* Prevents the image from repeating */
+          background-attachment: scroll; /* Keeps the background fixed during scrolling */
+          background-position: center; /* Centers the image */
+          height: 540px; /* Adjust as needed */
         }
         
     </style>
@@ -37,51 +91,57 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
           </head>
+          
           <body>
-            <nav class="navbar bg-body-tertiary">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">
-                    <img src="shroom.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                    HIPPIES
-                  </a>
-                  <div class="navdiv">
-                    <ul class="nav justify-content-end">
-                        <li><a href="base.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="reviews.html">Reviews</a></li>
-                    </ul>
+            <div id="topsection">
+              <nav class="navbar justify-content-center">
+                    <img src="shroom.png" alt="Logo" width="180" height="180" class="shrooms">
+                       <ul class="nav"> <!--justify-content-end-->
+                            <li><a href="base.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
+                        </ul>
+                        <div class="container">
+                          <div class="relative-parent">
+                            <div class="absolute-text">Vegan Sanctuary</div>
+                      </div>
+                    </div>
+                </nav>
                 </div>
-              </nav>
-              <div class="container text-center">
-                <div class="row align-items-center">
-                  <div class="col">
-                    <img src = "exterior.jpg" alt="Image not found.">
-                  </div>
-                  <div class="col">
-                    <br>
-                    <br>
-                    Who says Vegan food can't taste amazing?
-                    Founded 2025 by two friends with a duty to bring flavorful vegan food to Pelham,
-                    HIPPIES serves up affordable, savory BBQ and sandwiches, greens, and cruelty-free 
-                    spins on southern classics. With a focus on crafting a homey and welcoming atmosphere, our interior includes
-                    our very own indoor garden consisting of beautiful flowers and greenery. Creating
-                    a scenic indoor experience for our beautiful and loyal customers. If you are malnourished
-                    and feining for fern trod on down to HIPPIES!
-                  </div>
-                </div>
-              </div>
+                    <div class="container text-center">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <img src = "exterior.jpg" alt="Image not found." class = "exterioror">
+                        </div>
+                        <div class="col">
+                          <br>
+                          <br>
+                          <div class ="textio">
+                            The critically acclaimed restaurant housing top tier vegan foods is just around the corner!
+                          </div>
+                          <br>
+                          Who says Vegan food can't taste amazing?
+                          Founded 2025 by two friends with a duty to bring flavorful vegan food to Pelham,
+                          HIPPIES serves up affordable, savory BBQ and sandwiches, greens, and cruelty-free 
+                          spins on southern classics. With a focus on crafting a homey and welcoming atmosphere, our interior includes
+                          our very own indoor garden consisting of beautiful flowers and greenery. Creating
+                          a scenic indoor experience for our beautiful and loyal customers. If you are malnourished
+                          and feining for fern trod on down to HIPPIES!
+                        </div>
+                      </div>
+                    </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
             <div id="carouselFade" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="https://codehs.com/static/img/logo.png" class="d-block w-100" alt="Image not found.">
+                    <img src="bslide1.jpg" class="d-block w-100" alt="Image not found.">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://codehs.com/static/img/logo.png" class="d-block w-100" alt="Image not found.">
+                    <img src="bslide2.jpg" class="d-block w-100" alt="Image not found.">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://codehs.com/static/img/logo.png" class="d-block w-100" alt="Image not found.">
+                    <img src="bslide3.jpg" class="d-block w-100" alt="Image not found.">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
@@ -93,10 +153,11 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
+              <br>
             <div class="container text-center">
                 <div class="row align-items-start">
                   <div class="col">
-                    <img src="menu.jpg" alt="Image not found." width=1000 height=1250 class="d-inline-block align-text-center">
+                    <img src="menu.jpg" alt="Image not found." class="img-fluid d-inline-block align-text-center">
                   </div>
             </div>
             <br>
